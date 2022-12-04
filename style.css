@@ -1,0 +1,106 @@
+body {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  width: 100%;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.box-green {
+  order: 1;
+  background-color: #67d767;
+  height: 150px;
+  width: 100%;
+}
+
+.box-blue {
+  order: 2;
+  background-color: blue;
+  height: 150px;
+  width: 100%;
+}
+.box-red {
+  order: 3;
+  background-color: red;
+  height: 150px;
+  width: 100%;
+}
+.box-black {
+  order: 4;
+  background-color: black;
+  color: white;
+  height: 150px;
+  width: 100%;
+}
+
+.box-orange {
+  display: none;
+}
+
+/* zemota aris mobile first 499 mde */
+
+/*es imushavebs mxolod mashin roca 500 dan 699px mde*/
+/* media querryshi rac icereba amat vcvli */
+@media screen and (min-width: 500px) {
+  .box-green {
+    order: 2;
+  }
+  .box-blue {
+    order: 4;
+  }
+  .box-red {
+    order: 1;
+  }
+  .box-black {
+    order: 3;
+  }
+}
+
+/*es imushavebs 700 dan 899mde */
+/* media querryshi rac icereba amat vcvli */
+@media screen and (min-width: 700px) {
+  .box-green {
+    width: 40%;
+  }
+  .box-blue {
+    width: 100%;
+  }
+  .box-red {
+    width: 60%;
+  }
+  .box-black {
+    width: 100%;
+  }
+}
+
+/* es imushavebs 900 dan zemot usasrulod */
+/* media querryshi rac icereba amat vcvli */
+@media screen and (min-width: 900px) {
+  .container {
+    width: 70%;
+  }
+
+  .box-red {
+    background-size: cover;
+  }
+  .box-orange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    background-color: orange;
+    color: white;
+    font-size: 50px;
+  }
+}
